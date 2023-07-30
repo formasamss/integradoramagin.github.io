@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket de Entrega de Prendas</title>
+    <link rel="stylesheet" href="ticketE.css">
+</head>
+<body>
+    <div class="container">
+        <div class="ticket">
+            <h1>Ticket de Entrega de Prendas</h1>
+            <form id="formEntrega">
+                <label for="hora">Hora de Entrega:</label>
+                <input type="time" id="hora" required>
+                <br>
+
+                <label for="fecha">Fecha de Entrega:</label>
+                <input type="date" id="fecha" required>
+                <br>
+
+                <label for="cliente">Nombre del Cliente:</label>
+                <input type="text" id="cliente" required>
+                <br>
+
+                <label for="contacto">Número de Contacto:</label>
+                <input type="text" id="contacto" required>
+                <br>
+
+                <label for="prendas">Lista de Prendas Entregadas:</label>
+                <textarea id="prendas" placeholder="Escribe las prendas una por una y pulsa Enter" required></textarea>
+                <br>
+
+                <label for="folio">Número de Folio:</label>
+                <input type="text" id="folio" required>
+                <br>
+
+                <button type="button" onclick="generarTicket()">Generar Ticket</button>
+            </form>
+        </div>
+
+        <div id="ticketGenerado">
+            <h2>Detalles del Ticket</h2>
+            <p><strong>Hora de Entrega:</strong> <span id="horaEntrega"></span></p>
+            <p><strong>Fecha de Entrega:</strong> <span id="fechaEntrega"></span></p>
+            <p><strong>Nombre del Cliente:</strong> <span id="clienteTicket"></span></p>
+            <p><strong>Número de Contacto:</strong> <span id="contactoTicket"></span></p>
+            <p><strong>Número de Folio:</strong> <span id="folioTicket"></span></p>
+            <p><strong>Lista de Prendas Entregadas:</strong></p>
+            <ul id="prendasEntregadas"></ul>
+        </div>
+    </div>
+
+    <script src="ticketE.js"></script>
+</body>
+</html>

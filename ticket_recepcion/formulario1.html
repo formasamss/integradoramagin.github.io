@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket de Recepción de Prendas</title>
+    <link rel="stylesheet" href="formu1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="ticket">
+            <h1>Ticket de Recepción de Prendas</h1>
+            <form id="formRecepcion">
+                <label for="hora">Hora de Recepción:</label>
+                <input type="time" id="hora" required>
+                <br>
+
+                <label for="fecha">Fecha de Recepción:</label>
+                <input type="date" id="fecha" required>
+                <br>
+
+                <label for="cliente">Nombre del Cliente:</label>
+                <input type="text" id="cliente" required>
+                <br>
+
+                <label for="contacto">Número de Contacto:</label>
+                <input type="text" id="contacto" required>
+                <br>
+
+                <label for="prendas">Lista de Prendas Recibidas:</label>
+                <textarea id="prendas" placeholder="Escribe las prendas una por una y pulsa Enter" required></textarea>
+                <br>
+
+                <label for="nota">Nota Adicional:</label>
+                <textarea id="nota"></textarea>
+                <br>
+
+                <button type="button" onclick="programarEntrega()">Programar Entrega</button>
+            </form>
+        </div>
+
+        <div id="programacionEntrega">
+            <h2>Programación de Entrega</h2>
+            <p><strong>Hora de Recepción:</strong> <span id="horaRecepcionProgramada"></span></p>
+            <p><strong>Fecha de Recepción:</strong> <span id="fechaRecepcionProgramada"></span></p>
+            <p><strong>Nombre del Cliente:</strong> <span id="clienteProgramado"></span></p>
+            <p><strong>Número de Contacto:</strong> <span id="contactoProgramado"></span></p>
+            <p><strong>Lista de Prendas Recibidas:</strong></p>
+            <ul id="prendasProgramadas"></ul>
+            <p><strong>Nota Adicional:</strong> <span id="notaProgramada"></span></p>
+            <p><strong>Fecha de Entrega:</strong> <span id="fechaEntregaProgramada"></span></p>
+            <p><strong>Hora de Entrega:</strong> <span id="horaEntregaProgramada"></span></p>
+        </div>
+    </div>
+
+    <script src="formula1.js"></script>
+</body>
+</html>
+
+
+

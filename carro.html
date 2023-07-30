@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="imagenes/Logo/logooo (2).png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="shop.html">Servicios</a></li>
+                <li><a  href="destacados.html">Hogar</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contactanos</a></li>
+                <li><a class="active" href="carro.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+                <li><a href="Tickets.html">Tickets</a></li>
+            </ul>
+        </div>
+        <div id='search-box'>
+            <form action='/search' id='search-form' method='get' target='_top'>
+                <input id='search-text' name='q' placeholder='Escribe lo que buscas' type='text' />
+                <button id='search-button' type='submit'><span>Buscar</span></button>
+            </form>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-bag-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+                    <form id="procesar-pago" action="#" method="post">
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="cliente"
+                                    placeholder="Ingresa nombre cliente" name="destinatario">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo" name="cc_to">
+                            </div>
+                        </div>
+
+                        <div id="carrito" class="form-group table-responsive" >
+                            <table class="table" id="lista-compra" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Sub Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody >
+
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">IGV :</th>
+                                    <th scope="col">
+                                        <p id="igv"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-center" id="loaders">
+                            <img id="cargando" src="img/cargando.gif" width="220">
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <a href="index.php" class="btn btn-info btn-block">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <button href="#" class="btn btn-success btn-block" id="procesar-compra">Realizar compra</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+
+    <section class="section-p1">
+        <style>
+  footer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .col {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .follow .icon {
+    display: flex;
+  }
+
+  .follow .icon i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .col h4 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .col a {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .col a:hover {
+    color: #000;
+  }
+
+  .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+  }
+</style>
+        <footer>
+            <div class="col">
+                <img class="logo" src="" alt="">
+                <h4>Contacto</h4>
+                <p><strong>Dirección:</strong> Josafat F. Márquez 1, Colonial Iztapalapa,<br>
+                     Iztapalapa, 09270 Ciudad de México, CDMX</p>
+                <p><strong>Teléfono:</strong>55-57-74-89-04</p>
+                <p>Horario:<strong>Lunes a Domingo de 9:00 am a 9:00 pm</strong></p>
+                <div class="follow">
+                    <h4>Redes Sociales</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>Acerca de</h4>
+                <a href="about.html">Nosotros</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="contact.html">Contactanos</a>
+            </div>
+
+            <div class="col">
+                <h4>Mi Cuenta</h4>
+                <a href="index.php">Inicio</a>
+                <a href="carro.html">Carro de Compras</a>
+                <a href="shop.html">Servicios</a>
+                <a href="blog.html">Hogar</a>
+            </div>
+
+            <div class="copyright">
+                <p>© Sistema de Tintoreria Digital (STD)<br>
+                    Centro de la Ciudad de México,2023</p>
+            </div>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="js/"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/compra.js"></script>
+
+</body>
+
+</html>

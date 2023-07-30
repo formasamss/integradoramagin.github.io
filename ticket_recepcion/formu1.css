@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180vh;
+    background-image: url("imagenes/fondoooo.jpg");
+    background-size: cover;
+}
+
+.container {
+    width: 450px;
+}
+
+.ticket {
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #F0F8FF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #333;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#programacionEntrega {
+    display: none;
+    margin-top: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #F0F8FF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#fechaEntrega {
+    font-weight: bold;
+    color: #007BFF;
+}
